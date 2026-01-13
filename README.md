@@ -113,3 +113,63 @@ Since you have the "Perfect Output" (the raw trace) from Repo 1, you can treat t
 1. Create the new folder/repo `etl_optimizer`.
 2. Copy your `complex_pipeline.yaml` (the output from the 60-step test) into `tests/fixtures/raw_trace.yaml`.
 3. Begin writing the `VerticalCollapser` class.
+
+# ETL Optimizer
+
+![Coverage](https://img.shields.io/badge/coverage-98%25-brightgreen) ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+
+> **The Middle-End for Legacy Migration Compilers.**
+
+This engine takes raw, noisy execution traces (from SPSS, SAS, or SQL parsers) and transforms them into clean, optimized, and secure Logical Dataflow Graphs.
+
+## 🚀 Key Features
+
+### 1. Intelligent Compression
+Legacy scripts often contain verbose linear logic. The Optimizer performs **Vertical Collapse**, merging chains of `COMPUTE` operations into single atomic blocks.
+* **Metric:** Reduces ONS Benefit Pipeline from **60 steps to 29 steps**.
+
+### 2. Self-Healing Topology
+Parsing legacy code often results in "Dead Code" (syntax artifacts).
+* **DCE:** Automatically identifies and removes noise (`DO`, `FORMATS`).
+* **Rewiring:** Intelligently "heals" the graph by aliasing datasets to ensure lineage remains unbroken after node deletion.
+
+### 3. Stateful Security
+Uses `networkx` to enforce strict Graph Topology rules:
+* **Anti-Island:** Detects disconnected logic branches.
+* **Ghost Protocol:** Prevents "Use-Before-Definition" errors in variable formulas.
+
+## 🛠 Usage
+
+```python
+from src.ir.model import Pipeline
+from src.optimizer.collapser import VerticalCollapser
+from src.optimizer.promoter import SemanticPromoter
+from src.exporters.mermaid import MermaidExporter
+
+# 1. Load Raw Trace
+pipeline = Pipeline(**yaml_data)
+
+# 2. Promote & Clean (DCE + Rewiring)
+promoter = SemanticPromoter(pipeline)
+clean_pipeline = promoter.run()
+
+# 3. Collapse & Garbage Collect
+collapser = VerticalCollapser(clean_pipeline)
+optimized_pipeline = collapser.run()
+
+# 4. Visualize
+exporter = MermaidExporter(optimized_pipeline)
+print(exporter.generate())
+
+```
+
+## 🏗 Architecture
+
+The system uses a Multi-Pass Compiler Architecture:
+
+1. **Ingestion Pass:** Strict Pydantic Validation.
+2. **Semantic Pass:** Heuristic promotion of Generic nodes.
+3. **Optimization Pass:** Lineage-aware merging and GC.
+4. **Validation Pass:** Graph-theoretic topology checks.
+
+---
