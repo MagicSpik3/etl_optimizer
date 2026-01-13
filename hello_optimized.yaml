@@ -1,0 +1,64 @@
+metadata:
+  generator: SpecGen v0.1
+  source_type: SPSS
+datasets:
+- id: source_raw_data.csv
+  source: file
+  columns: []
+- id: ds_002_derived
+  source: derived
+  columns:
+  - name: x
+    type: integer
+  - name: y
+    type: integer
+- id: ds_003_materialized
+  source: derived
+  columns:
+  - name: x
+    type: integer
+  - name: y
+    type: integer
+- id: file_final_output.csv
+  source: file
+  columns:
+  - name: x
+    type: integer
+  - name: y
+    type: integer
+operations:
+- id: op_001_load
+  type: load_csv
+  inputs: []
+  outputs:
+  - source_raw_data.csv
+  parameters:
+    filename: raw_data.csv
+    format: TXT
+- id: batch_op_002_compute
+  type: batch_compute
+  inputs:
+  - source_raw_data.csv
+  outputs:
+  - ds_002_derived
+  parameters:
+    computes:
+    - target: x
+      expression: val1 + val2
+    - target: y
+      expression: x * 2
+- id: op_004_exec
+  type: materialize
+  inputs:
+  - ds_002_derived
+  outputs:
+  - ds_003_materialized
+  parameters: {}
+- id: op_005_save
+  type: save_binary
+  inputs:
+  - ds_003_materialized
+  outputs:
+  - file_final_output.csv
+  parameters:
+    filename: final_output.csv

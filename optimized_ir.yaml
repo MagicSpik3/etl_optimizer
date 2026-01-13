@@ -1,0 +1,1498 @@
+metadata:
+  generator: SpecGen v0.1
+  source_type: SPSS
+datasets:
+- id: source_control_vars.csv
+  source: file
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+- id: ds_015_derived
+  source: derived
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: min_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: max_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: reference_month_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: exclude_status_s
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_017_materialized
+  source: derived
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: min_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: max_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: reference_month_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: exclude_status_s
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_018_filtered
+  source: derived
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: min_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: max_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: reference_month_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: exclude_status_s
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_019_derived
+  source: derived
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: min_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: max_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: reference_month_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: exclude_status_s
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_020_materialized
+  source: derived
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: min_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: max_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: reference_month_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: exclude_status_s
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: file_control_values.sav
+  source: file
+  columns:
+  - name: parameter
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: value
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: min_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: max_age_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: reference_month_n
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: exclude_status_s
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: source_benefit_rates.csv
+  source: file
+  columns:
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: weekly_rate
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_021_generic
+  source: derived
+  columns:
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: weekly_rate
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: file_benefit_rates.sav
+  source: file
+  columns:
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: weekly_rate
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: source_claims_data.csv
+  source: file
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+- id: ds_022_derived
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_023_materialized
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_024_joined
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_025_materialized
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_034_derived
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_035_generic
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_036_generic
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_037_derived
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_038_generic
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_045_derived
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_046_generic
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_047_generic
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_048_joined
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_049_materialized
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_051_derived
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: daily_rate
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: payment_amount
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_052_filtered
+  source: derived
+  columns:
+  - name: claim_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: person_id
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: claim_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: status
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: join_key
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_num
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: dob_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_start_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: claim_end_date
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_years
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: age_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: status_valid
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_year
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: ref_month
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: month_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_start
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_end
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: eligible_days
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: daily_rate
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+  - name: payment_amount
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: ds_053_agg_active
+  source: derived
+  columns:
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: TOTAL_PAID
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+- id: file_benefit_monthly_summary.csv
+  source: file
+  columns:
+  - name: benefit_type
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: region
+    type: !!python/object/apply:src.ir.types.DataType
+    - string
+  - name: TOTAL_PAID
+    type: !!python/object/apply:src.ir.types.DataType
+    - integer
+operations:
+- id: op_001_load
+  type: !!python/object/apply:src.ir.types.OpType
+  - load_csv
+  inputs: []
+  outputs:
+  - source_control_vars.csv
+  parameters:
+    filename: control_vars.csv
+    format: TXT
+- id: batch_op_002_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - batch_compute
+  inputs:
+  - source_control_vars.csv
+  outputs:
+  - ds_015_derived
+  parameters:
+    computes:
+    - target: min_age_n
+      expression: $SYSMIS
+    - target: max_age_n
+      expression: $SYSMIS
+    - target: reference_month_n
+      expression: $SYSMIS
+    - target: min_age_n
+      expression: NUMBER ( value , F3.0 )
+    - target: max_age_n
+      expression: NUMBER ( value , F3.0 )
+    - target: reference_month_n
+      expression: NUMBER ( value , F6.0 )
+    - target: exclude_status_s
+      expression: value
+- id: op_018_exec
+  type: !!python/object/apply:src.ir.types.OpType
+  - materialize
+  inputs:
+  - ds_015_derived
+  outputs:
+  - ds_017_materialized
+  parameters: {}
+- id: op_019_filter
+  type: !!python/object/apply:src.ir.types.OpType
+  - filter_rows
+  inputs:
+  - ds_017_materialized
+  outputs:
+  - ds_018_filtered
+  parameters:
+    condition: NOT MISSING ( min_age_n )
+- id: op_020_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - compute_columns
+  inputs:
+  - ds_018_filtered
+  outputs:
+  - ds_019_derived
+  parameters:
+    target: join_key
+    expression: '1'
+- id: op_021_exec
+  type: !!python/object/apply:src.ir.types.OpType
+  - materialize
+  inputs:
+  - ds_019_derived
+  outputs:
+  - ds_020_materialized
+  parameters: {}
+- id: op_022_save
+  type: !!python/object/apply:src.ir.types.OpType
+  - save_binary
+  inputs:
+  - ds_020_materialized
+  outputs:
+  - file_control_values.sav
+  parameters:
+    filename: control_values.sav
+- id: op_023_load
+  type: !!python/object/apply:src.ir.types.OpType
+  - load_csv
+  inputs: []
+  outputs:
+  - source_benefit_rates.csv
+  parameters:
+    filename: benefit_rates.csv
+    format: TXT
+- id: op_024_generic
+  type: !!python/object/apply:src.ir.types.OpType
+  - sort
+  inputs:
+  - source_benefit_rates.csv
+  outputs:
+  - ds_021_generic
+  parameters:
+    keys: unknown
+- id: op_025_save
+  type: !!python/object/apply:src.ir.types.OpType
+  - save_binary
+  inputs:
+  - ds_021_generic
+  outputs:
+  - file_benefit_rates.sav
+  parameters:
+    filename: benefit_rates.sav
+- id: op_026_load
+  type: !!python/object/apply:src.ir.types.OpType
+  - load_csv
+  inputs: []
+  outputs:
+  - source_claims_data.csv
+  parameters:
+    filename: claims_data.csv
+    format: TXT
+- id: op_027_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - compute_columns
+  inputs:
+  - source_claims_data.csv
+  outputs:
+  - ds_022_derived
+  parameters:
+    target: join_key
+    expression: '1'
+- id: op_028_exec
+  type: !!python/object/apply:src.ir.types.OpType
+  - materialize
+  inputs:
+  - ds_022_derived
+  outputs:
+  - ds_023_materialized
+  parameters: {}
+- id: op_029_join
+  type: !!python/object/apply:src.ir.types.OpType
+  - join
+  inputs:
+  - ds_023_materialized
+  - file_control_values.sav
+  outputs:
+  - ds_024_joined
+  parameters:
+    by: join_key
+- id: op_030_exec
+  type: !!python/object/apply:src.ir.types.OpType
+  - materialize
+  inputs:
+  - ds_024_joined
+  outputs:
+  - ds_025_materialized
+  parameters: {}
+- id: batch_op_031_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - batch_compute
+  inputs:
+  - ds_025_materialized
+  outputs:
+  - ds_034_derived
+  parameters:
+    computes:
+    - target: dob_num
+      expression: NUMBER ( dob , F8.0 )
+    - target: claim_start_num
+      expression: NUMBER ( claim_start , F8.0 )
+    - target: claim_end_num
+      expression: NUMBER ( claim_end , F8.0 )
+    - target: dob_date
+      expression: DATE.MDY ( TRUNC ( MOD ( dob_num , 10000 ) / 100 ) , MOD ( dob_num
+        , 100 ) , TRUNC ( dob_num / 10000 ) )
+    - target: claim_start_date
+      expression: DATE.MDY ( TRUNC ( MOD ( claim_start_num , 10000 ) / 100 ) , MOD
+        ( claim_start_num , 100 ) , TRUNC ( claim_start_num / 10000 ) )
+    - target: claim_end_date
+      expression: DATE.MDY ( TRUNC ( MOD ( claim_end_num , 10000 ) / 100 ) , MOD (
+        claim_end_num , 100 ) , TRUNC ( claim_end_num / 10000 ) )
+    - target: age_years
+      expression: TRUNC ( ( claim_start_date - dob_date ) / ( 365.25 * 86400 ) )
+    - target: age_valid
+      expression: '1'
+- id: op_040_generic
+  type: !!python/object/apply:src.ir.types.OpType
+  - filter_rows
+  inputs:
+  - ds_034_derived
+  outputs:
+  - ds_035_generic
+  parameters:
+    condition: unknown
+- id: op_041_generic
+  type: !!python/object/apply:src.ir.types.OpType
+  - filter_rows
+  inputs:
+  - ds_035_generic
+  outputs:
+  - ds_036_generic
+  parameters:
+    condition: unknown
+- id: op_042_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - compute_columns
+  inputs:
+  - ds_036_generic
+  outputs:
+  - ds_037_derived
+  parameters:
+    target: status_valid
+    expression: '1'
+- id: op_043_generic
+  type: !!python/object/apply:src.ir.types.OpType
+  - filter_rows
+  inputs:
+  - ds_037_derived
+  outputs:
+  - ds_038_generic
+  parameters:
+    condition: unknown
+- id: batch_op_044_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - batch_compute
+  inputs:
+  - ds_038_generic
+  outputs:
+  - ds_045_derived
+  parameters:
+    computes:
+    - target: ref_year
+      expression: TRUNC ( reference_month_n / 100 )
+    - target: ref_month
+      expression: MOD ( reference_month_n , 100 )
+    - target: month_start
+      expression: DATE.MDY ( ref_month , 1 , ref_year )
+    - target: month_end
+      expression: DATE.MDY ( ref_month + 1 , 1 , ref_year ) - 1
+    - target: eligible_start
+      expression: MAX ( claim_start_date , month_start )
+    - target: eligible_end
+      expression: MIN ( claim_end_date , month_end )
+    - target: eligible_days
+      expression: ( eligible_end - eligible_start ) / 86400 + 1
+- id: op_051_generic
+  type: !!python/object/apply:src.ir.types.OpType
+  - filter_rows
+  inputs:
+  - ds_045_derived
+  outputs:
+  - ds_046_generic
+  parameters:
+    condition: unknown
+- id: op_052_generic
+  type: !!python/object/apply:src.ir.types.OpType
+  - sort
+  inputs:
+  - ds_046_generic
+  outputs:
+  - ds_047_generic
+  parameters:
+    keys: unknown
+- id: op_053_join
+  type: !!python/object/apply:src.ir.types.OpType
+  - join
+  inputs:
+  - ds_047_generic
+  - file_benefit_rates.sav
+  outputs:
+  - ds_048_joined
+  parameters:
+    by: benefit_type
+- id: op_054_exec
+  type: !!python/object/apply:src.ir.types.OpType
+  - materialize
+  inputs:
+  - ds_048_joined
+  outputs:
+  - ds_049_materialized
+  parameters: {}
+- id: batch_op_055_compute
+  type: !!python/object/apply:src.ir.types.OpType
+  - batch_compute
+  inputs:
+  - ds_049_materialized
+  outputs:
+  - ds_051_derived
+  parameters:
+    computes:
+    - target: daily_rate
+      expression: weekly_rate / 7
+    - target: payment_amount
+      expression: eligible_days * daily_rate
+- id: op_057_filter
+  type: !!python/object/apply:src.ir.types.OpType
+  - filter_rows
+  inputs:
+  - ds_051_derived
+  outputs:
+  - ds_052_filtered
+  parameters:
+    condition: ( age_valid = 1 AND status_valid = 1 AND eligible_days > 0 )
+- id: op_058_aggregate
+  type: !!python/object/apply:src.ir.types.OpType
+  - aggregate
+  inputs:
+  - ds_052_filtered
+  outputs:
+  - ds_053_agg_active
+  parameters:
+    outfile: '*'
+    break:
+    - benefit_type
+    - region
+    aggregations:
+    - TOTAL_PAID = SUM ( payment_amount )
+- id: op_059_save
+  type: !!python/object/apply:src.ir.types.OpType
+  - save_binary
+  inputs:
+  - ds_053_agg_active
+  outputs:
+  - file_benefit_monthly_summary.csv
+  parameters:
+    filename: benefit_monthly_summary.csv

@@ -1,0 +1,46 @@
+metadata:
+  source: "hello_world.sps"
+  timestamp: "2026-01-13T12:00:00"
+
+datasets:
+  - id: "raw_data.csv"
+    source: "file"
+  - id: "ds_step1"
+    source: "derived"
+  - id: "ds_step2"
+    source: "derived"
+  - id: "final_output.csv"
+    source: "file"
+
+operations:
+  # 1. Load Data
+  - id: "op_load"
+    type: "load_csv"       # ✅ Correct
+    inputs: []
+    outputs: ["raw_data.csv"]
+    parameters: {}
+
+  # 2. Compute X
+  - id: "op_calc_x"
+    type: "compute_columns" # ✅ FIXED (Was "compute")
+    inputs: ["raw_data.csv"]
+    outputs: ["ds_step1"]
+    parameters:
+      target: "x"
+      expression: "val1 + val2"
+
+  # 3. Compute Y
+  - id: "op_calc_y"
+    type: "compute_columns" # ✅ FIXED (Was "compute")
+    inputs: ["ds_step1"]
+    outputs: ["ds_step2"]
+    parameters:
+      target: "y"
+      expression: "x * 2"
+
+  # 4. Save Data
+  - id: "op_save"
+    type: "save_binary"     # ✅ Correct
+    inputs: ["ds_step2"]
+    outputs: ["final_output.csv"]
+    parameters: {}
