@@ -1,6 +1,6 @@
 import pytest
 import yaml
-from src.ir.model import Pipeline
+from etl_ir.model import Pipeline
 from src.optimizer.collapser import VerticalCollapser
 from src.optimizer.promoter import SemanticPromoter
 from src.optimizer.validator import SecurityValidator

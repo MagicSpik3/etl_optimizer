@@ -1,6 +1,6 @@
 import pytest
-from src.ir.model import Pipeline, Operation, Dataset
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation, Dataset
+from etl_ir.types import OpType
 from src.optimizer.validator import SecurityValidator
 
 class TestGraphTopology:
@@ -23,11 +23,11 @@ class TestGraphTopology:
         ops = [
             # Graph 1
             Operation(id="op_1", type=OpType.LOAD_CSV, inputs=[], outputs=["ds_a"]),
-            Operation(id="op_2", type=OpType.COMPUTE, inputs=["ds_a"], outputs=["ds_b"]),
+            Operation(id="op_2", type=OpType.COMPUTE_COLUMNS, inputs=["ds_a"], outputs=["ds_b"]),
             
             # Graph 2 (The Island - No Save, No Connection to Graph 1)
             Operation(id="op_3", type=OpType.LOAD_CSV, inputs=[], outputs=["ds_x"]),
-            Operation(id="op_4", type=OpType.COMPUTE, inputs=["ds_x"], outputs=["ds_y"])
+            Operation(id="op_4", type=OpType.COMPUTE_COLUMNS, inputs=["ds_x"], outputs=["ds_y"])
         ]
         
         pipeline = Pipeline(datasets=[ds_a, ds_b, ds_x, ds_y], operations=ops)
@@ -48,9 +48,9 @@ class TestGraphTopology:
         
         ops = [
             # A -> B
-            Operation(id="op_1", type=OpType.COMPUTE, inputs=["ds_a"], outputs=["ds_b"]),
+            Operation(id="op_1", type=OpType.COMPUTE_COLUMNS, inputs=["ds_a"], outputs=["ds_b"]),
             # B -> A (Cycle!)
-            Operation(id="op_2", type=OpType.COMPUTE, inputs=["ds_b"], outputs=["ds_a"])
+            Operation(id="op_2", type=OpType.COMPUTE_COLUMNS, inputs=["ds_b"], outputs=["ds_a"])
         ]
         
         pipeline = Pipeline(datasets=[ds_a, ds_b], operations=ops)
@@ -71,7 +71,7 @@ class TestGraphTopology:
         ops = [
             Operation(id="op_1", type=OpType.LOAD_CSV, inputs=[], outputs=["ds_a"]),
             # Missing op that produces ds_b!
-            Operation(id="op_2", type=OpType.COMPUTE, inputs=["ds_b"], outputs=["ds_c"])
+            Operation(id="op_2", type=OpType.COMPUTE_COLUMNS, inputs=["ds_b"], outputs=["ds_c"])
         ]
         
         pipeline = Pipeline(datasets=[ds_a, ds_c], operations=ops)

@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
-from src.ir.model import Pipeline, Operation
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation
+from etl_ir.types import OpType
 
 class SemanticPromoter:
     """
@@ -38,7 +38,7 @@ class SemanticPromoter:
                 parameters=op.parameters
             )
 
-            if current_op.type == OpType.GENERIC:
+            if current_op.type == OpType.GENERIC_TRANSFORM:
                 promoted_op = self._promote_or_drop(current_op)
                 
                 if promoted_op:
@@ -78,7 +78,7 @@ class SemanticPromoter:
         # 3. Promote FILTER
         if "SELECT IF" in command or "FILTER" in command or "IF" == command:
             return Operation(
-                id=op.id, type=OpType.FILTER, inputs=op.inputs, outputs=op.outputs,
+                id=op.id, type=OpType.FILTER_ROWS, inputs=op.inputs, outputs=op.outputs,
                 parameters={"condition": args or op.parameters.get("raw_content", "unknown")}
             )
 

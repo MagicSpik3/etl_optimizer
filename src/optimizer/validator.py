@@ -1,7 +1,7 @@
 import networkx as nx
 from typing import List
-from src.ir.model import Pipeline, Operation
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation
+from etl_ir.types import OpType
 import re
 
 class SecurityValidator:
@@ -73,7 +73,7 @@ class SecurityValidator:
         errors = []
         
         for op in self.pipeline.operations:
-            if op.type == OpType.COMPUTE:
+            if op.type == OpType.COMPUTE_COLUMNS:
                 errors.extend(self._validate_compute(op))
             # Future: Add hooks for _validate_join, _validate_filter, etc.
             

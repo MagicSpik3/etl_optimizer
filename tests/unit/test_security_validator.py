@@ -1,6 +1,6 @@
 import pytest
-from src.ir.model import Pipeline, Operation, Dataset, Column
-from src.ir.types import OpType, DataType
+from etl_ir.model import Pipeline, Operation, Dataset, Column
+from etl_ir.types import OpType, DataType
 # We haven't created this yet
 from src.optimizer.validator import SecurityValidator
 
@@ -18,7 +18,7 @@ class TestSecurityValidator:
         # Operation tries to use 'salary' in expression
         op = Operation(
             id="op1", 
-            type=OpType.COMPUTE, 
+            type=OpType.COMPUTE_COLUMNS, 
             inputs=["ds1"], 
             outputs=["ds2"], 
             # 'salary' is the ghost column here
@@ -45,7 +45,7 @@ class TestSecurityValidator:
         
         op = Operation(
             id="op1", 
-            type=OpType.COMPUTE, 
+            type=OpType.COMPUTE_COLUMNS, 
             inputs=["ds1"], 
             outputs=["ds2"], 
             parameters={"target": "age_months", "expression": "age * 12"}

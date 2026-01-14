@@ -1,6 +1,6 @@
 import pytest
-from src.ir.model import Pipeline, Operation, Dataset
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation, Dataset
+from etl_ir.types import OpType
 from src.optimizer.validator import SecurityValidator
 
 class TestValidatorIslands:

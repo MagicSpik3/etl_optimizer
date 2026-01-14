@@ -1,5 +1,5 @@
-from src.ir.model import Pipeline
-from src.ir.types import OpType
+from etl_ir.model import Pipeline
+from etl_ir.types import OpType
 
 class MermaidExporter:
     """

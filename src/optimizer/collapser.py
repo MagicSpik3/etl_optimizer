@@ -1,6 +1,6 @@
 from typing import List, Set
-from src.ir.model import Pipeline, Operation, Dataset
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation, Dataset
+from etl_ir.types import OpType
 
 class VerticalCollapser:
     """
@@ -20,7 +20,7 @@ class VerticalCollapser:
 
         for op in self.pipeline.operations:
             # 1. Check basic type
-            if op.type == OpType.COMPUTE:
+            if op.type == OpType.COMPUTE_COLUMNS:
                 # 2. Check Lineage Continuity
                 if self._is_connected_to_buffer(op):
                     self.buffer.append(op)

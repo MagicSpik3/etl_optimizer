@@ -1,6 +1,6 @@
 import pytest
-from src.ir.model import Pipeline, Operation, Dataset
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation, Dataset
+from etl_ir.types import OpType
 from src.optimizer.collapser import VerticalCollapser
 
 class TestCollapserGC:
@@ -18,9 +18,9 @@ class TestCollapserGC:
         
         ops = [
             # Op1: A -> B
-            Operation(id="op1", type=OpType.COMPUTE, inputs=["ds_a"], outputs=["ds_b"]),
+            Operation(id="op1", type=OpType.COMPUTE_COLUMNS, inputs=["ds_a"], outputs=["ds_b"]),
             # Op2: B -> C
-            Operation(id="op2", type=OpType.COMPUTE, inputs=["ds_b"], outputs=["ds_c"])
+            Operation(id="op2", type=OpType.COMPUTE_COLUMNS, inputs=["ds_b"], outputs=["ds_c"])
         ]
         
         pipeline = Pipeline(datasets=[ds_a, ds_b, ds_c], operations=ops)
@@ -52,8 +52,8 @@ class TestCollapserGC:
         ds_y = Dataset(id="ds_y", source="derived")
         
         ops = [
-            Operation(id="op1", type=OpType.COMPUTE, inputs=["ds_a"], outputs=["ds_b"]),
-            Operation(id="op2", type=OpType.COMPUTE, inputs=["ds_x"], outputs=["ds_y"])
+            Operation(id="op1", type=OpType.COMPUTE_COLUMNS, inputs=["ds_a"], outputs=["ds_b"]),
+            Operation(id="op2", type=OpType.COMPUTE_COLUMNS, inputs=["ds_x"], outputs=["ds_y"])
         ]
         
         pipeline = Pipeline(datasets=[ds_a, ds_b, ds_x, ds_y], operations=ops)

@@ -3,8 +3,8 @@ from pydantic import ValidationError
 import yaml
 
 # We assume these models will exist in src.ir.model
-from src.ir.model import Pipeline, Operation, Dataset
-from src.ir.types import OpType, DataType
+from etl_ir.model import Pipeline, Operation, Dataset
+from etl_ir.types import OpType, DataType
 
 class TestIngestion:
     

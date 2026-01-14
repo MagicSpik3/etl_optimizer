@@ -1,6 +1,6 @@
 import pytest
-from src.ir.model import Pipeline, Operation, Dataset
-from src.ir.types import OpType
+from etl_ir.model import Pipeline, Operation, Dataset
+from etl_ir.types import OpType
 from src.optimizer.collapser import VerticalCollapser
 
 class TestCollapserWiring:
@@ -17,8 +17,8 @@ class TestCollapserWiring:
         The Batch output must be 'C' (the last output), not 'B' or 'D'.
         """
         ops = [
-            Operation(id="op1", type=OpType.COMPUTE, inputs=["A"], outputs=["B"]),
-            Operation(id="op2", type=OpType.COMPUTE, inputs=["B"], outputs=["C"]),
+            Operation(id="op1", type=OpType.COMPUTE_COLUMNS, inputs=["A"], outputs=["B"]),
+            Operation(id="op2", type=OpType.COMPUTE_COLUMNS, inputs=["B"], outputs=["C"]),
             Operation(id="save", type=OpType.SAVE_BINARY, inputs=["C"], outputs=["D"])
         ]
         

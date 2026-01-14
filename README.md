@@ -141,7 +141,7 @@ Uses `networkx` to enforce strict Graph Topology rules:
 ## 🛠 Usage
 
 ```python
-from src.ir.model import Pipeline
+from etl_ir.model import Pipeline
 from src.optimizer.collapser import VerticalCollapser
 from src.optimizer.promoter import SemanticPromoter
 from src.exporters.mermaid import MermaidExporter

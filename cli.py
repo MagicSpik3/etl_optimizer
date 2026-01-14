@@ -6,7 +6,7 @@ from pathlib import Path
 # Ensure src is in python path
 sys.path.append('src')
 
-from src.ir.model import Pipeline
+from etl_ir.model import Pipeline
 from src.optimizer.promoter import SemanticPromoter
 from src.optimizer.collapser import VerticalCollapser
 from src.optimizer.validator import SecurityValidator
