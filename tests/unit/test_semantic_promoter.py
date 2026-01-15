@@ -1,7 +1,7 @@
 import pytest
 from etl_ir.model import Pipeline, Operation, Dataset
 from etl_ir.types import OpType
-from src.optimizer.promoter import SemanticPromoter
+from etl_optimizer.promoter import SemanticPromoter
 
 class TestSemanticPromoter:
     

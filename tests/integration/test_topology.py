@@ -1,7 +1,7 @@
 import pytest
 from etl_ir.model import Pipeline, Operation, Dataset
 from etl_ir.types import OpType
-from src.optimizer.validator import SecurityValidator
+from etl_optimizer.validator import SecurityValidator
 
 class TestGraphTopology:
     

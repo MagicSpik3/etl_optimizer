@@ -1,9 +1,9 @@
 import pytest
 import yaml
 from etl_ir.model import Pipeline
-from src.optimizer.collapser import VerticalCollapser
-from src.optimizer.promoter import SemanticPromoter
-from src.optimizer.validator import SecurityValidator
+from etl_optimizer.collapser import VerticalCollapser
+from etl_optimizer.promoter import SemanticPromoter
+from etl_optimizer.validator import SecurityValidator
 
 class TestOptimizationPipeline:
     

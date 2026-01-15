@@ -2,7 +2,7 @@ import pytest
 from etl_ir.model import Pipeline, Operation, Dataset
 from etl_ir.types import OpType, DataType
 # We haven't created this class yet, but we code against the interface we want!
-from src.optimizer.collapser import VerticalCollapser 
+from etl_optimizer.collapser import VerticalCollapser 
 
 class TestVerticalCollapser:
     

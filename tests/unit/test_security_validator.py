@@ -2,7 +2,7 @@ import pytest
 from etl_ir.model import Pipeline, Operation, Dataset, Column
 from etl_ir.types import OpType, DataType
 # We haven't created this yet
-from src.optimizer.validator import SecurityValidator
+from etl_optimizer.validator import SecurityValidator
 
 class TestSecurityValidator:
     
