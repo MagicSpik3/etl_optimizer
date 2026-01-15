@@ -7,7 +7,7 @@ class TestSemanticPromoter:
     
     def test_promotes_sort_command(self):
         """
-        Scenario: A Generic Node with command 'SORT' should become OpType.SORT.
+        Scenario: A Generic Node with command 'SORT' should become OpType.SORT_ROWS.
         """
         ops = [
             Operation(
@@ -24,7 +24,7 @@ class TestSemanticPromoter:
         result = promoter.run()
         
         op = result.operations[0]
-        assert op.type == OpType.SORT  # New Semantic Type!
+        assert op.type == OpType.SORT_ROWS  # New Semantic Type!
         assert op.parameters["keys"] == "BY age"
 
     def test_promotes_filter_command(self):

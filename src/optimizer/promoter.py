@@ -71,7 +71,7 @@ class SemanticPromoter:
         # 2. Promote SORT
         if "SORT" in command:
             return Operation(
-                id=op.id, type=OpType.SORT, inputs=op.inputs, outputs=op.outputs,
+                id=op.id, type=OpType.SORT_ROWS, inputs=op.inputs, outputs=op.outputs,
                 parameters={"keys": args or op.parameters.get("raw_content", "unknown")}
             )
             

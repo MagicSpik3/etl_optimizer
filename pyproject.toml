@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etl_optimizer"
+version = "0.1.0"
+description = "Topology optimization and validation for ETL pipelines"
+dependencies = [
+    "etl-ir-core",
+    "pydantic>=2.0",
+    "networkx"  # Assuming you use networkx for graph logic, optional if not
+]
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
