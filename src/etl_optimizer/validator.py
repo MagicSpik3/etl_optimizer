@@ -15,7 +15,9 @@ class SecurityValidator:
     # SPSS Keywords to ignore when checking for variable names
     KNOWN_FUNCTIONS = {
         "NUMBER", "DATE", "MDY", "TRUNC", "MOD", "SUM", "MEAN", "MAX", "MIN", 
-        "SYSMIS", "AND", "OR", "NOT", "IF", "THRU", "LOWEST", "HIGHEST"
+        "SYSMIS", "AND", "OR", "NOT", "IF", "THRU", "LOWEST", "HIGHEST",
+        # Common functions used by parser/codegen
+        "LAG", "CONCAT", "CONCATENATE", "PASTE", "STR_C", "NA_IF", "CASE_WHEN", "IF_ELSE"
     }
     def __init__(self, pipeline: Pipeline):
         self.pipeline = pipeline
@@ -94,9 +96,13 @@ class SecurityValidator:
                 for col in ds.columns:
                     input_columns.add(col.name.upper()) # Case insensitive normalization
 
-        # 2. Extract Variables from Expression
+        # 2. Strip quoted string literals so we don't accidentally extract tokens
+        #    from inside them (e.g., "ID_" should not produce token ID_)
+        cleaned_expr = re.sub(r'".*?"|\'.*?\'', '', expression)
+
+        # 3. Extract Variables from Expression
         # Regex to find words that look like variables
-        tokens = set(re.findall(r'[a-zA-Z_][a-zA-Z0-9_]*', expression))
+        tokens = set(re.findall(r'[a-zA-Z_][a-zA-Z0-9_]*', cleaned_expr))
         
         # 3. Check for Ghosts
         for token in tokens:
